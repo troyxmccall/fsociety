@@ -7,7 +7,7 @@ A Penetration Testing Framework, you will have every script that a hacker needs
 
 ## Fsociety Contains All Tools Used In Mr Robot Series
 
-![alt tag](http://nikolaskama.me/content/images/2016/07/mr-robot-1.gif)
+[![alt tag](http://nikolaskama.me/content/images/2016/07/mr-robot-1.gif)](https://wikipedia.org/wiki/Mr._Robot)
 
 ## Menu
 
@@ -134,11 +134,12 @@ Or Use Google Cloud Console [Cloud Shell](https://console.cloud.google.com/cloud
 
 ```bash
 docker-compose build
-
-docker-compose run --rm fsociety fsociety
+docker-compose up -d
+docker-compose exec fsociety fsociety
+docker-compose down # destroys instance
 ```
 
-# Use
+# Screenshots
 
 [![asciicast](https://asciinema.org/a/URj2nvpbYpeJyJe43KlASZ7fz.png)](https://asciinema.org/a/URj2nvpbYpeJyJe43KlASZ7fz)
 
@@ -148,7 +149,11 @@ docker-compose run --rm fsociety fsociety
 
 [thehappydinoa](https://github.com/thehappydinoa)
 
+[alexcreek](https://github.com/alexcreek)
+
 [mswell](https://github.com/mswell)
+
+[huangsam](https://github.com/huangsam)
 
 [RyanFilho](https://github.com/RyanFilho)
 

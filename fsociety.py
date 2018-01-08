@@ -31,7 +31,7 @@ import glob
 import random
 import Queue
 import threading
-import requests
+#import requests
 import base64
 from getpass import getpass
 from commands import *
@@ -146,8 +146,6 @@ def menu():
         dzz()
     elif choice == "8":
         postexp()
-    elif choice == "9":
-        sniper()
     elif choice == "0":
         updatefs()
     elif choice == "99":
@@ -158,21 +156,10 @@ def menu():
         menu()
 
 
-def sniper():
-    print("This tool is only available for Linux and similar systems  ")
-    choicesniper = raw_input("Continue Y / N: ")
-    if choicesniper in yes:
-        os.system("git clone https://github.com/Manisso/fsociety.git")
-        os.system("cd fsociety && sudo bash ./install.sh")
-        os.system("fsociety")
-    elif choicesniper == "":
-        menu()
-
-
 def updatefs():
     print ("This tool is only available for Linux and similar systems ")
-    choicesniper = raw_input("Continue Y / N: ")
-    if choicesniper in yes:
+    choiceupdate = raw_input("Continue Y / N: ")
+    if choiceupdate in yes:
         os.system("git clone https://github.com/Manisso/fsociety.git")
         os.system("cd fsociety && sudo bash ./update.sh")
         os.system("fsociety")
@@ -370,8 +357,8 @@ def pixiewps():
     choicewps = raw_input("Continue ? Y/N : ")
     if choicewps in yes:
         os.system("git clone https://github.com/wiire/pixiewps.git")
-        os.system(" cd pixiewps/src & make ")
-        os.system(" cd pixiewps/src & sudo make install")
+        os.system("cd pixiewps & make ")
+        os.system("sudo make install")
     if choicewps in no:
         menu()
     elif choicewps == "":
@@ -480,12 +467,11 @@ def nmap():
 
     choice7 = raw_input("continue ? Y / N : ")
     if choice7 in yes:
-        os.system("wget https://nmap.org/dist/nmap-7.01.tar.bz2")
-        os.system("bzip2 -cd nmap-7.01.tar.bz2 | tar xvf -")
-        os.system("cd nmap-7.01 & ./configure")
-        os.system("cd nmap-7.01 & make")
-        os.system("su root")
-        os.system("cd nmap-7.01 & make install")
+        os.system("git clone https://github.com/nmap/nmap.git")
+        os.system("cd nmap")
+        os.system("./configure")
+        os.system("make")
+        os.system("make install")
     elif choice7 in no:
         info()
     elif choice7 == "":
@@ -620,6 +606,7 @@ def setoolkit():
     print(" allow you to make a believable attack quickly. SET is a product of TrustedSec, LLC  ")
     print("an information security consulting firm located in Cleveland, Ohio.")
     print("")
+
     choiceset = raw_input("y / n :")
     if choiceset in yes:
         os.system(
